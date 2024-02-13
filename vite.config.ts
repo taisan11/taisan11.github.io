@@ -3,6 +3,10 @@ import honox from 'honox/vite'
 import client from 'honox/vite/client'
 import { defineConfig } from 'vite'
 import ssg from '@hono/vite-ssg'
+// MDX //
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+import mdx from '@mdx-js/rollup'
 
 const entry = './app/server.ts'
 
@@ -13,7 +17,11 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
-      plugins: [honox(), ssg()],
+      plugins: [honox(), ssg({ entry }),
+        mdx({
+        jsxImportSource: 'hono/jsx',
+        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+      })],
     }
   }
 })
