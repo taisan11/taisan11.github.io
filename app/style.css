@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  background-color: #c1ffe0;
+  background-size: cover;
+}
+.tyuusinn {
+  text-align: center;
+  margin : 0 auto;
+}
+.menu{
+  background-color: #ffffff;
+  width: 60%;
+  margin: 0 auto;
+}
+.menu h2 {
+  color: #e60033;
+  font-size: 2em;
+}
