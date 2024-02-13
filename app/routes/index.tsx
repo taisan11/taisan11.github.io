@@ -1,11 +1,7 @@
 import { css } from 'hono/css'
 import { createRoute } from 'honox/factory'
 import Mlink from '../component/mlink'
-import type { Meta } from '../types'
-
-const className = css`
-  font-family: sans-serif;
-`
+// import type { Meta } from '../types'
 
 export default createRoute((c) => {
   return c.render(
