@@ -11,7 +11,7 @@ export default createRoute((c) => {
       <p>ここでは適当にいろいろ書いてくよ</p>
       <div class="menu">
         <h2>めにゅー(記事)</h2>
-        <Mlink to="blog/2024-2-13.mdx" title="本日日記#1" date="2024-2-13"/>
+        <Mlink to="blog/2024-2-13" title="本日日記#1" date="2024-2-13"/>
       </div>
       <p>©taisan11</p>
     </div>,
