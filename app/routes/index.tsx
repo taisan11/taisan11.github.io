@@ -10,7 +10,10 @@ export default createRoute((c) => {
       <p>Not English</p>
       <p>ここでは適当にいろいろ書いてくよ</p>
       <div class="menu">
-        <h2>めにゅー(記事)</h2>
+        <h3>めにゅー(その他)</h3>
+        <Mlink to="about" title="自己紹介" date="2024-2-19"/><br />
+        <a href="http://" id='dona'>寄付!!(予告)</a>
+        <h3>めにゅー(記事)</h3>
         <Mlink to="blog/2024-2-13" title="本日日記#1" date="2024-2-13"/>
       </div>
       <p>©taisan11</p>
