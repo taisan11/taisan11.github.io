@@ -1,7 +1,7 @@
 import { css } from 'hono/css'
 import { createRoute } from 'honox/factory'
 import Mlink from '../component/mlink'
-// import type { Meta } from '../types'
+import type { Meta } from '../types'
 
 export default createRoute((c) => {
   const posts = import.meta.glob<{ frontmatter: Meta }>('./blog/*.mdx', {
@@ -20,11 +20,12 @@ export default createRoute((c) => {
         {Object.entries(posts).map(([id, module]) => {
           if (module.frontmatter) {
             return (
-              <Mlink to={`${id.replace(/\.mdx$/, '')}`} title={module.frontmatter.title} date={`${id.replace(/\.mdx$/, '')}`}/>
+              <>
+              <Mlink to={`${id.replace(/\.mdx$/, '')}`} title={module.frontmatter.title} date={`${id.replace(/\/blog\/(\d{4}-\d{2}-\d{2})/,'$1')}`}/><br/>
+              </>
             )
           }
         })}
-        <Mlink to="blog/2024-2-13" title="本日日記#1" date="2024-2-13"/>
       </div>
       <p>©taisan11</p>
     </div>,
